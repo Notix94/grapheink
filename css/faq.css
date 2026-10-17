@@ -1,0 +1,12 @@
+details { border-top: 1px solid rgba(184, 155, 74, .4); }
+details:last-of-type { border-bottom: 1px solid rgba(184, 155, 74, .4); }
+summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 1.25rem .25rem; cursor: pointer; list-style: none;
+  font-size: 1.25rem; color: var(--creme);
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--or); font-size: 1.6rem; line-height: 1; }
+details[open] summary::after { content: "\2013"; }
+details[open] summary { color: var(--or); }
+details p { padding: 0 .25rem .5rem; color: var(--sable); }

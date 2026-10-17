@@ -1,0 +1,68 @@
+.galerie {
+  display: grid;
+  gap: 1.25rem 1rem;
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+.galerie figure {
+  margin: 0;
+}
+.vignette {
+  display: block;
+  width: 100%;
+  padding: 0;
+  cursor: zoom-in;
+  overflow: hidden;
+  background: var(--ardoise);
+  border: 1px solid rgba(184, 155, 74, 0.45);
+}
+.galerie img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+
+  transition: filter 0.25s;
+}
+.vignette:hover img,
+.vignette:focus-visible img {
+  filter: brightness(0.6);
+}
+.galerie figcaption {
+  margin-top: 0.5rem;
+  color: var(--sable);
+  font-size: 0.9rem;
+}
+
+/* gros plan */
+.visionneuse[open] {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.visionneuse::backdrop {
+  background: rgba(20, 26, 30, 0.94);
+}
+.visionneuse img {
+  max-width: min(92vw, 60rem);
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid var(--or);
+}
+.fermer {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: 0;
+  color: var(--or);
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}

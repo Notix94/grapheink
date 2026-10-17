@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Brenn, tatoueur</title>
+    <meta
+      name="description"
+      content="À compléter : métier + ville + une phrase sur le style de Brenn."
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+  </head>
+  <body class="page-portfolio">
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="media/logo.png" alt="Brenn, retour à l'accueil" />
+      </a>
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+      />
+      <label for="menu-toggle" class="burger"
+        ><span></span><span></span><span></span
+      ></label>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="artiste.html">Artiste</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="section">
+        <div class="conteneur">
+          <h1>Portfolio</h1>
+          <p>
+            Des projets réalisés, dans des styles variés, pour montrer l'étendue
+            de ce qui est possible.
+          </p>
+          <div class="galerie" id="galerie"></div>
+
+          <dialog class="visionneuse" id="visionneuse">
+            <button type="button" class="fermer" aria-label="Fermer la photo">
+              ×
+            </button>
+            <img src="" alt="" />
+          </dialog>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        © Brenn, tatoueur.
+        <a href="mentions-legales.html">Mentions légales</a> ·
+        <a href="confidentialite.html">Confidentialité</a>
+      </p>
+      <p>
+        <a href="#">Instagram</a> ·
+        <a href="mailto:graphiteinktattoo@gmail.com"
+          >graphiteinktattoo@gmail.com</a
+        >
+      </p>
+    </footer>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>

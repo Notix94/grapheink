@@ -1,0 +1,18 @@
+.resultat:empty {
+  display: none;
+}
+.resultat {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--or);
+  background: var(--sapin);
+  margin: 0 0 1.5rem;
+}
+.resultat-erreur {
+  border-color: #c0614f;
+}
+.page-contact .zone-formulaire {
+  min-height: 18rem;
+}
+.h-captcha {
+  margin-top: 1.5rem;
+}

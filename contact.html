@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Brenn, tatoueur</title>
+    <meta
+      name="description"
+      content="À compléter : métier + ville + une phrase sur le style de Brenn."
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body class="page-contact">
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="media/logo.png" alt="Brenn, retour à l'accueil" />
+      </a>
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+      />
+      <label for="menu-toggle" class="burger"
+        ><span></span><span></span><span></span
+      ></label>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="artiste.html">Artiste</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="section">
+        <div class="conteneur conteneur-etroit">
+          <h1>Demander un projet</h1>
+          <p>
+            Raconte ton idée, je reviens vers toi. Inutile de choisir un
+            artiste.
+          </p>
+          <div class="zone-formulaire">
+            <p
+              id="resultat"
+              class="resultat"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="a7c45095-b16b-40b4-82fe-d2cc378edc4f"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="Nouvelle demande de projet (site)"
+              />
+              <input type="hidden" name="from_name" value="Site Brenn" />
+              <input
+                type="checkbox"
+                name="botcheck"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <label for="nom">Nom et prénom</label>
+              <input type="text" id="nom" name="name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="tel">Téléphone (facultatif)</label>
+              <input type="tel" id="tel" name="telephone" />
+
+              <label for="delai">Délai souhaité</label>
+              <input
+                type="text"
+                id="delai"
+                name="delai"
+                placeholder="Ex. : dans les 2 mois, pas pressé..."
+              />
+
+              <label for="consultation">Type de consultation</label>
+              <select id="consultation" name="consultation">
+                <option>Par mail</option>
+                <option>Rendez-vous physique</option>
+              </select>
+
+              <label for="projet">Décris ton projet</label>
+              <textarea
+                id="projet"
+                name="message"
+                required
+                placeholder="Idée, style, emplacement, taille approximative, lien vers des références..."
+              ></textarea>
+
+              <label class="consentement">
+                <input type="checkbox" name="consentement" required />
+                <span
+                  >J'accepte que ces informations soient utilisées pour répondre
+                  à ma demande.
+                  <a href="confidentialite.html"
+                    >Politique de confidentialité</a
+                  ></span
+                >
+              </label>
+              <div
+                class="h-captcha"
+                data-captcha="true"
+                data-theme="dark"
+              ></div>
+              <button type="submit">Envoyer ma demande</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        © Brenn, tatoueur.
+        <a href="mentions-legales.html">Mentions légales</a> ·
+        <a href="confidentialite.html">Confidentialité</a>
+      </p>
+      <p>
+        <a href="#">Instagram</a> ·
+        <a href="mailto:graphiteinktattoo@gmail.com"
+          >graphiteinktattoo@gmail.com</a
+        >
+      </p>
+    </footer>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.legal h1 { margin-bottom: .3em; }
+.legal .maj { color: var(--sable); font-size: .95rem; }
+.legal h2 {
+  margin: 2.2em 0 .6em; padding-top: 1.2rem;
+  font-size: 1.4rem; color: var(--or);
+  border-top: 1px solid rgba(184, 155, 74, .3);
+}
+.legal ul { max-width: 62ch; margin: 0 0 1.1em; padding-left: 1.2rem; }
+.legal li { margin-bottom: .5rem; }
+.legal strong { color: var(--sable); font-weight: 600; }
