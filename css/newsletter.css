@@ -1,2 +1,26 @@
-/* Page à compléter : le style des champs est déjà dans global.css (.zone-formulaire) */
-.page-newsletter .zone-formulaire { min-height: 12rem; }
+/* Les champs et boutons viennent de global.css (.zone-formulaire) */
+.page-newsletter .zone-formulaire input.input--hidden { display: none; }
+
+/* Messages de Brevo : cachés par défaut, affichés par leur script */
+.sib-form-message-panel {
+  display: none;
+  margin: 0 0 1.5rem; padding: 1rem 1.25rem;
+  border: 1px solid var(--or); background: var(--sapin);
+}
+.sib-form-message-panel--active { display: block; }
+#error-message { border-color: #c0614f; }
+
+.entry__error { display: block; margin: .4rem 0 0; color: #e29a8c; font-size: .95rem; }
+.entry__error:empty { display: none; }
+
+/* Icône de chargement du bouton (son script la cherche, il plante si elle manque) */
+.sib-hide-loader-icon { display: none; }
+.progress-indicator__icon {
+  width: 1rem; height: 1rem; margin-right: .5rem;
+  fill: currentColor; vertical-align: -.15em;
+  animation: tourne 1s linear infinite;
+}
+@keyframes tourne { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .progress-indicator__icon { animation: none; } }
+
+.erreur-consentement { margin: .5rem 0 0; color: #e29a8c; font-size: .95rem; }

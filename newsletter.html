@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <link rel="icon" type="image/png" href="media/logo.png" />
+    <link rel="apple-touch-icon" href="media/logo.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Newsletter | Brenn, tatoueur</title>
+    <title>Newsletter | GraphiteInk</title>
     <meta
       name="description"
-      content="À compléter : métier + ville + une phrase sur le style de Brenn."
+      content="Inscris-toi à la newsletter de Brenn : nouveaux visuels, prints, conventions et créneaux de dernière minute."
     />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/newsletter.css" />
@@ -28,6 +30,7 @@
       <nav class="site-nav" aria-label="Navigation principale">
         <a href="artiste.html">Artiste</a>
         <a href="portfolio.html">Portfolio</a>
+
         <a href="faq.html">FAQ</a>
         <a href="newsletter.html" aria-current="page">Newsletter</a>
         <a href="contact.html">Contact</a>
@@ -41,25 +44,155 @@
             Nouveaux visuels, prints, conventions et créneaux de dernière minute
             : reçois-les avant tout le monde.
           </p>
-          <div class="zone-formulaire">
-            <!-- Formulaire d'inscription à intégrer ici (Brevo / Mailchimp) -->
-            <!-- Prévoir : champ email + case de consentement NON précochée -->
+
+          <div class="zone-formulaire sib-form">
+            <div id="sib-form-container" class="sib-form-container">
+              <div id="error-message" class="sib-form-message-panel">
+                <span class="sib-form-message-panel__inner-text"
+                  >Nous n'avons pas pu confirmer ton inscription. Réessaie ou
+                  écris-nous directement.</span
+                >
+              </div>
+              <div id="success-message" class="sib-form-message-panel">
+                <span class="sib-form-message-panel__inner-text"
+                  >Ton inscription est confirmée. À bientôt dans ta boîte mail
+                  !</span
+                >
+              </div>
+
+              <div
+                id="sib-container"
+                class="sib-container--large sib-container--vertical"
+              >
+                <form
+                  id="sib-form"
+                  method="POST"
+                  action="https://29505d09.sibforms.com/serve/MUIFACG-8gL-Ks1sc4chk2eRH4aMcGqocqylnk_ZvRc1Z3A5FQKa8fJGB3hVHZwN486zJdmDVRVbxbIHGmXfDKgFcCzzbe7ycm_9mduBQV6kF9xH_SsaYww9ssV29sT9M1MwZ1n8C7Hmy1Z14Le3RRAiG1gElt6gXvMmDq_Ijep7ZBSbFAQwdmOmuA4_BO6JlWW1bc96vGM0rpuW2A=="
+                  data-type="subscription"
+                >
+                  <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                      <label class="entry__label" for="EMAIL" data-required="*"
+                        >Ton adresse email</label
+                      >
+                      <div class="entry__field">
+                        <input
+                          class="input"
+                          type="text"
+                          inputmode="email"
+                          id="EMAIL"
+                          name="EMAIL"
+                          autocomplete="email"
+                          value=""
+                          placeholder="prenom@exemple.com"
+                          data-required="true"
+                          required
+                        />
+                      </div>
+                      <label class="entry__error entry__error--primary"></label>
+                    </div>
+                  </div>
+
+                  <label class="consentement">
+                    <input
+                      type="checkbox"
+                      id="consentement"
+                      aria-describedby="erreur-consentement"
+                    />
+                    <span
+                      >J'accepte de recevoir la newsletter de Brenn. Je peux me
+                      désinscrire à tout moment grâce au lien présent dans
+                      chaque mail.
+                      <a href="confidentialite.html"
+                        >Politique de confidentialité</a
+                      ></span
+                    >
+                  </label>
+                  <p
+                    id="erreur-consentement"
+                    class="erreur-consentement"
+                    role="alert"
+                    hidden
+                  >
+                    Coche la case pour t'inscrire à la newsletter.
+                  </p>
+
+                  <div class="sib-form-block">
+                    <button
+                      class="sib-form-block__button sib-form-block__button-with-loader"
+                      form="sib-form"
+                      type="submit"
+                    >
+                      <svg
+                        class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                        viewBox="0 0 512 512"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"
+                        />
+                      </svg>
+                      S'inscrire
+                    </button>
+                  </div>
+
+                  <input
+                    type="text"
+                    name="email_address_check"
+                    value=""
+                    class="input--hidden"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                  />
+                  <input type="hidden" name="locale" value="fr" />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
       <p>
-        © Brenn, tatoueur.
         <a href="mentions-legales.html">Mentions légales</a> ·
         <a href="confidentialite.html">Confidentialité</a>
       </p>
       <p>
-        <a href="#">Instagram</a> ·
+        <a href="https://www.instagram.com/brennledamany/">Instagram</a> ·
         <a href="mailto:graphiteinktattoo@gmail.com"
           >graphiteinktattoo@gmail.com</a
         >
       </p>
     </footer>
+
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = "Veuillez choisir un code pays";
+      window.LOCALE = "fr";
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
+        "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. ";
+      window.GENERIC_INVALID_MESSAGE =
+        "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.INVALID_NUMBER =
+        "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.INVALID_DATE = "Veuillez saisir une date valide";
+      window.REQUIRED_MULTISELECT_MESSAGE =
+        "Veuillez choisir au moins une option";
+      window.translation = {
+        common: {
+          selectedList: "{quantity} liste sélectionnée",
+          selectedLists: "{quantity} listes sélectionnées",
+          selectedOption: "{quantity} sélectionné",
+          selectedOptions: "{quantity} sélectionnés",
+        },
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+    <script src="js/newsletter.js"></script>
+    <script
+      defer
+      src="https://sibforms.com/forms/end-form/build/main.js"
+    ></script>
   </body>
 </html>
