@@ -15,11 +15,22 @@
   color: var(--sauge);
   font-style: italic;
 }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 @media (max-width: 760px) {
   .artiste {
     grid-template-columns: 1fr;
   }
   .portrait {
     max-width: 22rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .actions .bouton {
+    text-align: center;
   }
 }
